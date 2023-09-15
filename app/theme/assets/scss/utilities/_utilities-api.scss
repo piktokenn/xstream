@@ -1,0 +1,207 @@
+// Border
+$border-width-options: (
+    property: border-width,
+    class: border,
+    responsive: true,
+    values: (
+        0: 0,
+        null: 1px,
+        2: 2px,
+        3: 3px,
+        4: 4px,
+        5: 5px,
+        6: 6px,
+        7: 7px,
+        8: 8px
+    ),
+);
+
+// Border radius
+$border-radius-options: (
+    property: border-radius,
+    class: rounded,
+    responsive: true,
+    values: (
+        null: $border-radius,
+        0: 0,
+        1: $border-radius-sm,
+        2: $border-radius-lg,
+        3: $border-radius-xl,
+        4: $border-radius-2xl,
+        5: $border-radius-3xl,
+        6: $border-radius-4xl,
+        7: $border-radius-5xl,
+        8: $border-radius-6xl,
+        9: $border-radius-7xl,
+        10: $border-radius-8xl,
+        pill: $border-radius-pill,
+        circle: $border-radius-circle
+    ),
+);
+// Border color
+$border-color-options: (
+    property: border-color,
+    class: border,
+    responsive: true,
+    values: map-merge(
+        $theme-colors,
+        (
+            "transparent": transparent,
+            "current": currentColor,
+            "base": $border-color,
+            "body": $body-bg,
+            "black": $black,
+            "white": $white
+        )
+    ),
+);
+// Color
+$color-options: (
+    property: color,
+    class: text,
+    responsive: true,
+    values: map-merge(
+        $theme-colors,
+        (
+            "white": $white,
+            "body": $body-color,
+            "muted": $text-muted,
+            "heading": $headings-color,
+            "black-50": rgba($black, .5),
+            "black-80": rgba($black, .8),
+            "white-50": rgba($white, .5),
+            "white-80": rgba($white, .8)
+        )
+    ),
+);
+
+// Font Weight
+$font-weight-options: (
+    property: font-weight,
+    class: fw,
+    responsive: true,
+    values: (
+        light: $font-weight-light,
+        lighter: $font-weight-lighter,
+        normal: $font-weight-normal,
+        semibold: $font-weight-semibold,
+        bold: $font-weight-bold,
+        bolder: $font-weight-bolder,
+        black: $font-weight-black
+    ),
+);
+
+// Font Size
+$font-size-options: (
+    property: font-size,
+    class: fs,
+    responsive: true,
+    values: (
+        xxs: $font-size-xxs,
+        xs: $font-size-xs,
+        sm: $font-size-sm,
+        base: $font-size-base,
+        md: $font-size-md,
+        lg: $font-size-lg,
+        xl: $font-size-xl,
+        2xl: $font-size-2xl
+    ),
+);
+
+// Letter spacing
+$letter-spacing-options: (
+    property: letter-spacing,
+    class: ls,
+    responsive: true,
+    values: (
+        tighter: -0.025em,
+        tight: -0.015em,
+        normal: 0,
+        wide: 0.025em,
+        wider: 0.05em,
+        widest: 0.1em
+    ),
+);
+
+
+// Box shadow
+$shadow-options: (
+    property: box-shadow,
+    class: shadow,
+    state: hover,
+    values: (
+        null: $box-shadow,
+        sm: $box-shadow-sm,
+        lg: $box-shadow-lg,
+        xl: $box-shadow-xl,
+        inset: $box-shadow-inset,
+        none: none
+    ),
+);
+
+
+// Opacity
+$opacity-options: (
+    property: opacity,
+    class: opacity,
+    responsive: true,
+    values: (
+        0: 0,
+        10: 0.1,
+        20: 0.2,
+        30: 0.3,
+        40: 0.4,
+        50: 0.5,
+        60: 0.6,
+        70: 0.7,
+        80: 0.8,
+        90: 0.9,
+        100: 1
+    ),
+);
+
+// Width
+$width-options: (
+    property: width,
+    class: w,
+    responsive: true,
+    values: (
+        0: 0,
+        50px: 50px,
+        75px: 75px,
+        100px: 100px,
+        150px: 150px,
+        200: 200px,
+        250: 250px,
+        275: 275px,
+        300: 300px,
+        340: 340px,
+        400: 400px,
+        728: 728px,
+        25: 25%,
+        50: 50%,
+        75: 75%,
+        90: 90%,
+        100: 100%,
+        auto: auto
+    ),
+);
+// Utilities init
+$utilities: (
+
+    // Typography
+    "color": $color-options,
+    "font-weight": $font-weight-options,
+    "font-size": $font-size-options,
+    "letter-spacing": $letter-spacing-options,
+    "opacity": $opacity-options,
+    "border-width": $border-width-options,
+    "border-radius": $border-radius-options,
+    "border-color": $border-color-options,
+    "box-shadow": $shadow-options,
+
+    // size
+
+    "width": $width-options
+);
+

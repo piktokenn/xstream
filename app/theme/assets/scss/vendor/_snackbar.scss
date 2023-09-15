@@ -1,0 +1,104 @@
+.snackbar-container {
+    transition: all 500ms ease;
+    transition-property: top, right, bottom, left, opacity;
+    font-size: 14px;
+    min-height: 14px;
+    background-color: var(--#{$variable-prefix}gray-300);
+    border-radius: 6px !important;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    line-height: 22px;
+    padding: 18px 24px;
+    bottom: -100px;
+    top: -100px;
+    opacity: 0;
+    z-index: 9999;
+
+    .action {
+        background: inherit;
+        display: inline-block;
+        border: none;
+        font-size: inherit;
+        text-transform: uppercase;
+        color: rgba(#fff, .75);
+        font-weight: 600;
+        font-size: 12px;
+        margin: 0 0 0 24px;
+        padding: 0;
+        min-width: min-content;
+        cursor: pointer;
+    }
+}
+
+@media (min-width: 640px) {
+    .snackbar-container {
+        min-width: 480px;
+        max-width: 568px;
+        display: inline-flex;
+        border-radius: 2px;
+        margin: 1.5rem auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .snackbar-container {
+        left: 0;
+        right: 0;
+        width: 100%;
+    }
+}
+
+.snackbar-pos {
+    &.bottom-center {
+        top: auto !important;
+        bottom: 0;
+        left: 50%;
+        margin-bottom: 30px;
+        transform: translate(-50%, 0);
+    }
+
+    &.bottom-left {
+        top: auto !important;
+        bottom: 0;
+        left: 0;
+    }
+
+    &.bottom-right {
+        top: auto !important;
+        bottom: 0;
+        right: 0;
+    }
+
+    &.top-left {
+        bottom: auto !important;
+        top: 0;
+        left: 0;
+    }
+
+    &.top-center {
+        bottom: auto !important;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    &.top-right {
+        bottom: auto !important;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .snackbar-pos {
+
+        &.bottom-center,
+        &.top-center {
+            left: 0;
+            transform: none;
+        }
+    }
+}

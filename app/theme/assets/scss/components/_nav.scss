@@ -1,0 +1,223 @@
+//
+// Nav menu (used for sidebars)
+//
+
+
+.nav-menu {
+    .nav-link {
+        padding: .35rem 0;
+
+        &:not(.active) {
+            &:hover {
+                color: $gray-800;
+            }
+
+            &.active {
+                font-weight: $font-weight-bolder;
+            }
+        }
+    }
+}
+
+.nav-segment {
+
+    position: relative;
+    background-color: $gray-100;
+    padding: .25rem;
+    border-radius: 100px;
+
+    .nav-link {
+        display: inline-flex;
+        align-items: center;
+        color: $gray-700;
+        font-size: $font-size-xs;
+        padding: .5rem 1rem;
+        border-radius: 100px;
+        font-weight: 600;
+
+        &.active {
+            font-weight: 600;
+            color: $gray-900;
+            background-color: #fff;
+
+            box-shadow: 0 3px 6px 0 rgb(140 152 164 / 25%);
+        }
+    }
+}
+
+// nav border active
+.nav-active-border {
+    a {
+        color: inherit;
+        position: relative;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    .active {
+        color: inherit;
+
+        &:after {
+            content: '';
+            position: absolute;
+            border-color: var(--theme-color);
+            border-width: 3px;
+        }
+    }
+
+    &.rounded .active {
+        &:after {
+            border-width: 3px;
+            border-radius: 100px;
+        }
+    }
+
+    &.left .active {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            bottom: 5px;
+            border-width: 5px;
+            border-left-style: solid;
+            border-color: var(--theme-color);
+        }
+
+        color: var(--theme-color) !important;
+    }
+
+    &.navbar-nav.left .active {
+        &:after {
+            top: 0;
+            bottom: 0;
+            left: -1.75rem;
+            border-width: 6px;
+        }
+    }
+
+    &.right .active {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            right:0 ;
+            bottom: 5px;
+            border-width: 6px;
+            border-right-style: solid;
+            border-color: var(--theme-color);
+        }
+
+        color: var(--theme-color) !important;
+    }
+
+    &.top .active {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-width: 2px;
+            border-top-style: solid;
+        }
+
+        color: var(--theme-color) !important;
+    }
+
+    &.bottom .active {
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0; 
+            border-bottom-style: solid;
+        }
+
+        color: var(--theme-color) !important;
+    }
+}
+
+// nav text active
+.nav-active-text {
+    a {
+        color: inherit;
+        position: relative;
+
+        &.active,
+        &:hover {
+            color: var(--theme-color) !important;
+        }
+    }
+}
+
+
+    .episode-nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        a {
+            display: flex;
+            align-items: center;
+            padding: 15px 0px;
+            border-radius: $border-radius;
+            line-height: 1.6;
+
+            .svg-icon {
+                width: 50px;
+                height: 50px;
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
+                -ms-border-radius: 100%;
+                -o-border-radius: 100%;
+                border-radius: 100%; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: $gray-300;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+                stroke: #fff;
+            }
+
+            .name {
+                font-size: .875rem;
+                font-weight: 500;
+                color: #fff;
+            }
+
+            .episode {
+                font-size: 12px;
+                color: $text-muted;
+            }
+
+            &:hover {
+                color: $theme;
+                .svg-icon {
+                    background-color: $theme;
+                }
+
+                .name {
+                    color: $theme;
+                }
+
+                .episode {
+                    color: rgba(#fff, .75);
+                }
+            }
+        }
+    }
+
+    @include media-breakpoint-down(sm) {
+        .episode-nav {
+            display: none;
+        }
+    }

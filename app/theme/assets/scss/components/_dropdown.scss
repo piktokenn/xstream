@@ -1,0 +1,47 @@
+
+// Dropdown menu fluid
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) {
+        $infix: breakpoint-infix($breakpoint, $grid-breakpoints);
+        .dropdown-menu#{$infix}-fluid {
+            width: calc(100% - (var(--x-gutter-x, 1.5rem) * 2));
+            left: var(--x-gutter-x, 1.5rem) !important;
+
+            &[data-bs-popper] {
+                left: var(--x-gutter-x, 1.5rem);
+            }
+        }
+    }
+}
+
+@include media-breakpoint-up(md) {
+    .dropdown-menu-sm {
+        min-width: $dropdown-min-width-sm !important;
+
+        &.dropdown-menu-arrow {
+            &.dropdown-menu-right {
+                &:before {
+                    right: 2rem;
+                    left: auto;
+                }
+            }
+        }
+    }
+
+    .dropdown-menu-md {
+        min-width: $dropdown-min-width-md !important;
+    }
+
+    .dropdown-menu-lg {
+        min-width: $dropdown-min-width-lg !important;
+    }
+
+    .dropdown-menu-xl {
+        min-width: $dropdown-min-width-xl !important;
+    }
+
+    .dropdown-menu-2xl {
+        min-width: $dropdown-min-width-2xl !important;
+    }
+}

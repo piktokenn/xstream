@@ -1,0 +1,150 @@
+.btn-theme {
+    background-color: var(--theme-color);
+    color: #fff;
+
+    &:hover {
+        background-color: var(--theme-color);
+        color: #fff;
+    }
+}
+
+.btn-ghost {
+    background-color: $gray-300;
+    color: inherit;
+
+    &:hover {
+        color: #fff;
+        background-color: var(--theme-color);
+    }
+}
+
+.btn-transparent {
+    &:focus,
+    &:active,
+    &:hover {
+        background-color: var(--#{$variable-prefix}gray-300);
+        color: $headings-color;
+    }
+}
+
+.btn-scroll {
+    background-color: var(--#{$variable-prefix}gray-300);
+    color: inherit;
+    transition: all .4s;
+    visibility: hidden;
+    position: fixed;
+    bottom: -4rem;
+    right: 3rem;
+    z-index: 1000;
+
+    &.show {
+        visibility: visible;
+        bottom: 2rem;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: var(--theme-color);
+    }
+}
+
+.btn-service.active {
+    background-color: var(--theme-color);
+    color: #fff;
+}
+
+//
+// Button square
+//
+
+.btn-square {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: $btn-square-width;
+    height: $btn-square-width;
+    padding: 0;
+
+    &.btn-xs {
+        width: $btn-square-width-xs;
+        height: $btn-square-width-xs;
+    }
+
+    &.btn-sm {
+        width: $btn-square-width-sm;
+        height: $btn-square-width-sm;
+    }
+
+    &.btn-lg {
+        width: $btn-square-width-lg;
+        height: $btn-square-width-lg;
+    }
+
+    &.btn-xl {
+        width: $btn-square-width-xl;
+        height: $btn-square-width-xl;
+    }
+
+    &.btn-2xl {
+        width: $btn-square-width-2xl;
+        height: $btn-square-width-2xl;
+    }
+}
+
+.btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .btn-inner-text:not(:first-child) {
+        margin-left: .75em;
+    }
+
+    .btn-inner-text:not(:last-child) {
+        margin-right: .75em;
+    }
+
+    .btn-inner-icon {
+        svg {
+
+            vertical-align: -2px;
+        }
+    }
+}
+
+
+.btn-reaction {
+    width: 2.75rem !important;
+    height: 2.75rem !important;
+    position: relative;
+
+    span {
+        position: absolute;
+        top: -10px;
+        right: -15px;
+        font-size: 10px;
+        color: #fff;
+        background-color: var(--#{$variable-prefix}gray-300);
+        border-radius: 100px;
+        border:solid 3px var(--#{$variable-prefix}body-bg);
+        padding: 3px 6px;
+    }
+}
+
+.btn-like {
+
+    &.active,
+    &:hover {
+        background-color: $success !important;
+        color: #fff;
+    }
+}
+
+.btn-dislike {
+
+    &.active,
+    &:hover {
+        background-color: $danger !important;
+        color: #fff;
+    }
+}

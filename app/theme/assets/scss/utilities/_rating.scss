@@ -1,0 +1,20 @@
+// Rating
+
+.star-rating {
+    display: inline-flex;
+    align-items: center;
+
+    i {
+        margin-right: .075rem;
+        display: block;
+        width: .875rem;
+        height: .875rem;
+        position: relative;
+        top: -.04rem;
+        -webkit-mask-image: escape-svg($rating-star);
+        mask-image: escape-svg($rating-star);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+}

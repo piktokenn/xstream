@@ -1,0 +1,32 @@
+/*
+Theme Name: Playido
+Theme URI: https://codelug.com/
+Author: Codelug
+Author URI: https://codelug.com/
+Description: Movie and TV Show streaming platform
+Version: 1.0.0
+*/
+// Bootstrap functions
+@import 'bootstrap/scss/functions';
+
+// Theme variables
+@import 'mixin';
+@import 'variables';
+
+// Theme utilities
+@import 'utilities/utilities-api';
+
+// Bootstrap core
+@import 'bootstrap/scss/bootstrap'; 
+
+@import 'utilities/dark';
+// Theme utilities
+@import 'utilities/utilities';
+// Theme components
+@import 'components/components';
+
+@import "vendor/snackbar";
+@import "vendor/range";
+@import "vendor/lightbox";
+@import "vendor/slider";
+@import "vendor/videojs";

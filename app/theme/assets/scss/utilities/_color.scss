@@ -1,0 +1,93 @@
+// Color
+.text-current {
+    color: currentColor;
+
+    &.active,
+    &:hover {
+        color: var(--theme-color);
+    }
+}
+
+.text-white-hover {
+    color: rgba($white, .75);
+
+    &:hover {
+        color: $white;
+    }
+}
+.bg-img-cover,
+.ratio-select {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+// Color
+.bg-theme {
+    background-color: var(--theme-color);
+}
+
+.text-theme {
+    color: var(--theme-color);
+
+    &:hover {
+        color: var(--theme-color);
+    }
+}
+
+// Soft color variation
+@each $color,
+$value in $brand-colors {
+    .bg-#{$color} {
+        color: #fff;
+        background-color: $value;
+    }
+}
+
+.bg-ads {
+    background-color: var(--#{$variable-prefix}gray-200);
+}
+.bg-grad {
+    background: linear-gradient(315deg, #ce0f50 25%, #fe112d 75%);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+}
+
+.text-grad {
+    background: linear-gradient(125deg, #00FF57 0%, #010033 40%, #460043 70%, #F0FFC5 100%), linear-gradient(55deg, #0014C9 0%, #410060 100%), linear-gradient(300deg, #FFC700 0%, #001AFF 100%), radial-gradient(135% 215% at 115% 40%, #393939 0%, #393939 40%, #849561 calc(40% + 1px), #849561 60%, #EED690 calc(60% + 1px), #EED690 80%, #ECEFD8 calc(80% + 1px), #ECEFD8 100%), linear-gradient(125deg, #282D4F 0%, #282D4F 40%, #23103A calc(40% + 1px), #23103A 70%, #A0204C calc(70% + 1px), #A0204C 88%, #FF6C00 calc(88% + 1px), #FF6C00 100%);
+    background-blend-mode: overlay, screen, overlay, overlay, normal;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-alert {
+    background: linear-gradient(315deg, #ce0f50 25%, #fe112d 75%);
+    color: #fff;
+    font-size: $font-size-sm;
+    border-radius: $border-radius;
+    padding: 18px 15px;
+}
+
+#loading-bar {
+    position: fixed;
+    z-index: 2147483647;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--theme-color);
+    transition: width 500ms ease-out, opacity 400ms linear;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

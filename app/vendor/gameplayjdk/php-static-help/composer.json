@@ -1,0 +1,22 @@
+{
+  "name": "gameplayjdk/php-static-help",
+  "description": "Common static helper classes.",
+  "type": "library",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "require": {
+    "php": ">=7.1",
+    "ext-json": "*"
+  },
+  "authors": [
+    {
+      "name": "GameplayJDK",
+      "email": "github@gameplayjdk.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Help\\": "src/"
+    }
+  }
+}

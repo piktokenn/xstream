@@ -1,0 +1,55 @@
+.form-category {
+    .form-check {
+        padding: 0;
+        display: inline-flex;
+        margin: 0 .25rem .5rem 0;
+    }
+
+    .form-check-input {
+        display: none;
+
+        &:checked+.form-check-label {
+            background-color: $gray-400;
+            color: #fff;
+        }
+    }
+
+    .form-check-label {
+        margin: 0;
+        padding: .5rem 1.25rem;
+        background-color: $gray-300;
+        font-size: $font-size-xs;
+        border-radius: 100px;
+    }
+}
+
+
+.form-radio {
+    .form-check {
+        padding: 0;
+        display: flex;
+        margin-bottom: 0;
+    }
+
+    .form-check-input {
+        display: none;
+
+        &:checked+.form-check-label {
+            color: $theme;
+        }
+    }
+
+    .form-check-label {
+        margin: 0;
+        padding: .5rem .75rem;
+        color: $body-color;
+        font-size: $font-size-sm;
+        border-radius: 100px;
+    }
+}
+textarea {
+    resize: none;
+}
+select option {
+    background-color: inherit !important;
+}

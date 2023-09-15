@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /*.php$
+Disallow: /*.js$
+Disallow: /*.css$

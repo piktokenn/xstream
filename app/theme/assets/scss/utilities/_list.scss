@@ -1,0 +1,112 @@
+// List
+
+.list-separator {
+    margin-bottom: 0;
+
+    .list-inline-item {
+        position: relative;
+        margin-left: 0;
+        margin-right: -$list-separator-item-margin-x;
+
+        &:not(:last-child) {
+            padding-right: $list-separator-padding-x;
+
+            &::after {
+                position: absolute;
+                top: calc(50% - #{$list-separator-pseudo-height / 2});
+                right: #{$list-separator-padding-x / 2 - $list-separator-pseudo-width / 2};
+                width: $list-separator-pseudo-width;
+                height: $list-separator-pseudo-height;
+                background-color: $list-separator-pseudo-bg-color;
+                @include border-radius($list-separator-border-radius);
+                content: "";
+            }
+        }
+    }
+
+    .list-separator-link {
+        color: $list-separator-link-color;
+
+        &:hover {
+            color: $list-separator-link-hover-color;
+        }
+    }
+}
+
+.list-check {
+    padding: 0;
+    margin: 0;
+
+    li {
+        list-style: none;
+        padding: .25rem 0;
+        margin: 0;
+        display: flex;
+
+        i {
+            width: 1rem;
+            min-width: 1rem;
+            height: 1rem;
+            margin-top: .15rem;
+            background-color: $success;
+            background-image: escape-svg($list-checked-bg-image);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            display: inline-block;
+            border-radius: 100px;
+            margin-right: .75rem;
+        }
+    }
+}
+
+.list-featured {
+    list-style: none;
+    padding: 0;
+
+    li {
+        display: flex;
+        flex-wrap: wrap;
+        font-size: $font-size-xs;
+        padding: .25rem 0;
+
+        >* {
+
+            flex: 0 0 auto;
+            width: 50%;
+            max-width: 100%;
+        }
+
+        .list-name {
+            color: $gray-600;
+        }
+
+        .list-body {
+            font-weight: 500;
+            color: $gray-700;
+        }
+    }
+}
+
+
+
+.lazyload,
+.lazyloading {
+    opacity: 0;
+}
+
+.lazyloaded {
+    opacity: 1;
+    transition: opacity 100ms;
+}
+
+[data-expand].lazyload {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+[data-expand].lazyloaded {
+    opacity: 1;
+    transition: all 700ms;
+    transform: scale(1);
+}

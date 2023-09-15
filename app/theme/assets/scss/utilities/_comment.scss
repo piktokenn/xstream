@@ -1,0 +1,258 @@
+.comment-toolbar {
+    display: flex;
+    align-items: center;
+    font-size: $font-size-xs;
+
+    border-bottom: solid 1px $gray-200;
+    margin-bottom: 1rem;
+
+    ul {
+
+        flex: 0 0 auto;
+        width: 100%;
+
+        a {
+            padding: 0 1.25rem 1rem;
+            color: rgba(#fff, .65);
+            display: inline-flex;
+            align-items: center;
+            font-size: $font-size-xs;
+            position: relative;
+
+            &.btn-icon {
+                padding: 0 .75rem 1rem;
+            }
+
+            &:after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                border-top-style: solid;
+                border-width: 3px;
+                border-color: transparent;
+            }
+
+            &.active {
+                color: #fff;
+
+                &:after {
+                    border-color: var(--theme-color);
+                }
+            }
+
+            &:hover,
+            &.active {
+                color: #fff;
+            }
+        }
+    }
+}
+
+.comment-more {
+    font-weight: 500;
+    position: relative;
+    font-size: $font-size-xs;
+    color: #fff;
+    z-index: 4;
+    margin-top: 1rem;
+    display: inline-block;
+
+    &:hover {
+        color: var(--theme-color);
+        text-decoration: underline;
+    }
+}
+
+.comment-form {
+
+    margin: 1rem 0;
+    position: relative;
+
+    .character-count {
+        position: absolute;
+        right: 20px;
+        bottom: -5px;
+        color: $text-muted;
+        font-size: 12px;
+    }
+
+    .form-control {
+        resize: none;
+        min-height: auto;
+        margin-bottom: .5rem;
+    }
+}
+
+.edit-form,
+.reply-form {
+    margin-top: 0;
+    position: relative;
+    display: none;
+}
+
+.replybox {
+
+    flex: 0 0 auto;
+    width: 100%;
+}
+
+.comment-alert {}
+
+.comments-list {
+    padding: 0;
+    list-style: none;
+    position: relative;
+    margin: 0;
+
+    .spoiler {
+        position: relative;
+
+        &:before {
+            position: absolute;
+            top: -10px;
+            right: 0px;
+            left: -10px;
+            bottom: -10px;
+            content: "";
+            z-index: 2;
+            background: rgba($body-bg, 0.7);
+            backdrop-filter: blur(5px);
+        }
+    }
+
+    .spoiler-btn {
+        position: absolute;
+        top: 50%;
+        left: 70px;
+        font-size: 12px;
+        transform: translateY(-50%);
+        z-index: 3;
+        cursor: pointer;
+        color: #fff;
+
+        span {
+            font-weight: 500;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &.children {
+        padding-left: 60px;
+    }
+
+    .comment-hide {
+        display: none;
+    }
+    .comment-flex {
+        display: flex;
+    }
+
+    .comment-list {
+        padding: 15px 0;
+
+        .comment-avatar {
+            flex: 0 0 40px;
+            max-width: 40px;
+        }
+    }
+
+    .comment-body {
+        flex: 0 0 auto;
+        width: 100%;
+        padding-left: 20px;
+
+        .comment-name {
+            font-weight: 500;
+            color: #fff;
+            font-size: 12px;
+            margin-bottom: 5px;
+            display: inline-block;
+        }
+
+        .comment-text {
+
+            font-size: 14px;
+            color: $gray-600;
+        }
+
+        .comment-date {
+            display: inline-block;
+            margin-left: 10px;
+            color: $text-muted;
+            font-size: 12px;
+        }
+
+        .comment-status {
+            display: inline-block;
+            margin-left: 10px;
+            color: $warning;
+            font-size: 12px;
+        }
+    }
+
+    .comment-footer {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+
+        flex: 0 0 auto;
+        width: 100%;
+
+        .reply,
+        .report,
+        a {
+            cursor: pointer;
+            font-size: 12px;
+            display: inline-block;
+            margin-right: 15px;
+            color: $text-muted;
+
+            &:hover {
+                color: var(--theme-color);
+            }
+        }
+
+        .votes {
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .like,
+        .dislike {
+            display: inline-flex;
+            align-items: center;
+
+            &.voted {
+                color: var(--theme-color);
+
+            }
+
+            svg {
+                width: 16px;
+                height: 16px;
+                margin-right: 10px;
+                fill: $text-muted;
+            }
+
+            span {
+                font-size: 12px;
+                color: $text-muted;
+            }
+
+            &.voted svg,
+            &:hover svg {
+                cursor: pointer;
+                fill: var(--theme-color);
+            }
+        }
+    }
+
+    form {
+        display: none;
+    }
+}

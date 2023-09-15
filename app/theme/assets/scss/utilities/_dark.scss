@@ -1,0 +1,28 @@
+@media (prefers-color-scheme: dark) {
+    :root {
+        --hue: 222deg;
+        --shade0-hsl: var(--hue) 14% 90%;
+        --shade1-hsl: var(--hue) 5% 62%;
+        --shade2-hsl: var(--hue) 5% 52%;
+        --shade3-hsl: var(--hue) 6% 30%;
+        --shade4-hsl: var(--hue) 7% 30%;
+        --shade5-hsl: var(--hue) 9% 23%;
+        --shade6-hsl: var(--hue) 10% 17%;
+        --shade7-hsl: var(--hue) 14% 11%;
+        --shade8-hsl: var(--hue) 19% 9%;
+        --shade9-hsl: var(--hue) 20% 7%;
+        --shade10-hsl: var(--hue) 33% 4%;
+
+        --shade0: hsla(var(--shade0-hsl) / 1);
+        --shade1: hsla(var(--shade1-hsl) / 1);
+        --shade2: hsla(var(--shade2-hsl) / 1);
+        --shade3: hsla(var(--shade3-hsl) / 1);
+        --shade4: hsla(var(--shade4-hsl) / 1);
+        --shade5: hsla(var(--shade5-hsl) / 1);
+        --shade6: hsla(var(--shade6-hsl) / 1);
+        --shade7: hsla(var(--shade7-hsl) / 1);
+        --shade8: hsla(var(--shade8-hsl) / 1);
+        --shade9: hsla(var(--shade9-hsl) / 1);
+        --shade10: hsla(var(--shade10-hsl) / 1);
+    }
+}

@@ -1,0 +1,40 @@
+// Pagination tabs
+
+.pagination-spaced {
+    border-radius: 0;
+
+    .page-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .5rem; 
+        font-weight: 500;
+        border-width: 0;
+        background-color: $gray-200;
+        border-radius: $pagination-border-radius; 
+        font-size: $font-size-xs;
+        color: #fff;
+    }
+    .active .page-link {
+        background-color: var(--theme-color);
+        color: #fff;
+    }
+    .disabled .page-link {
+        display: none;
+    }
+    .page-link:hover {
+        background-color: var(--theme-color);
+        color: #fff;
+    }
+
+    &.pagination-sm {
+        .page-link {
+
+    padding: 0.55rem 0.875rem;
+        }
+    }
+    &.pagination-lg {
+        width: 52px;
+        height: 52px;
+    }
+}
