@@ -1,0 +1,67 @@
+.card-model {
+    margin-bottom: 1.5rem;
+        box-shadow: $box-shadow-lg;
+    position: relative;
+    .card-body {}
+
+    .card-bottom {
+        padding: .5rem 0 0;
+        display: flex;
+
+        .btn-preview {
+            padding: .675rem 1.5rem;
+        }
+    }
+
+
+    &:hover {
+
+        box-shadow: $box-shadow-lg;
+
+        .card-overlay {
+            opacity: 1;
+        }
+
+    }
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all .2s;
+    background: linear-gradient(180deg, rgba($white, 0.15), $white 100%);
+    border-top-right-radius: inherit;
+    border-top-left-radius: inherit;
+    opacity: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+
+}
+
+
+.card-dashed {
+    border: dashed 2px $gray-200;
+    background-color: transparent;
+}
+
+.card-append {
+    box-shadow: $box-shadow-sm;
+    border: 0;
+
+    .card-header {
+        padding: .65rem 1rem;
+        display: flex;
+        align-items: center;
+        border: 0;
+    }
+
+    .card-body {
+
+        padding: .65rem 1rem;
+    }
+}

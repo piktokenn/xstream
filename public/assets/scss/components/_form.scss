@@ -1,0 +1,145 @@
+
+.form-check-label {
+    @include font-size($form-label-font-size);
+    font-style: $form-label-font-style;
+    font-weight: $form-label-font-weight;
+    color: $form-label-color;
+    margin-left: .5rem;
+}
+.form-label {
+
+    @include font-size($font-size-xs);
+}
+
+/*
+Select group
+ */
+.form-selectgroup {
+    display: inline-flex;
+    flex-wrap: wrap;
+    border-radius: 100px;
+    padding: .25rem;
+
+    .form-selectgroup-item {}
+}
+
+.form-selectgroup-vertical {
+    flex-direction: column;
+}
+
+.form-selectgroup-item {
+    display: block;
+    position: relative;
+}
+
+.form-selectgroup-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
+.form-selectgroup-label {
+    position: relative;
+    margin: 0;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    transition: border-color .3s, background .3s, color .3s;
+    display: inline-flex;
+    align-items: center;
+    color: $gray-600;
+    font-size: $font-size-xs;
+    padding: .675rem 2rem;
+    border-radius: 100px;
+    font-weight: 500;
+
+    .icon:only-child {
+        margin: 0 -.25rem;
+    }
+
+    &:hover {
+        color: $body-color;
+    }
+}
+
+.form-selectgroup-check {
+    display: inline-block;
+    width: $form-check-input-width;
+    height: $form-check-input-width;
+    border: $form-check-input-border;
+    vertical-align: middle;
+
+    .form-selectgroup-input[type="checkbox"]+.form-selectgroup-label & {
+        border-radius: $form-check-input-border-radius;
+    }
+
+    .form-selectgroup-input[type="radio"]+.form-selectgroup-label & {
+        border-radius: $form-check-radio-border-radius;
+    }
+
+
+    .form-selectgroup-input[type="checkbox"]:checked+.form-selectgroup-label & {
+        background-image: escape-svg($form-check-input-checked-bg-image);
+    }
+
+    .form-selectgroup-input[type="radio"]:checked+.form-selectgroup-label & {
+        background-image: escape-svg($form-check-radio-checked-bg-image);
+    }
+}
+
+.form-selectgroup-input:checked+.form-selectgroup-label {
+    z-index: 1; 
+    color: $gray-700;
+    background-color: #fff;
+
+    box-shadow: 0 3px 6px 0 rgb(140 152 164 / 25%);
+}
+
+.form-selectgroup-input:focus+.form-selectgroup-label {
+    z-index: 2; 
+}
+
+.form-selectgroup-label-content {}
+
+/**
+Alternate version of form select group
+ */
+.form-selectgroup-boxes {
+    .form-selectgroup-label {
+        text-align: left;
+        padding: $card-spacer-x $card-spacer-y;
+        color: inherit;
+    }
+
+    .form-selectgroup-input:checked {
+        +.form-selectgroup-label {
+            color: inherit;
+
+            .form-selectgroup-title {
+                color: $primary;
+            }
+
+            .form-selectgroup-label-content {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/**
+Select group
+ */
+.form-selectgroup-pills {
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .form-selectgroup-item {
+        flex-grow: 0;
+    }
+
+    .form-selectgroup-label {
+        border-radius: 50px;
+    }
+}

@@ -1,0 +1,49 @@
+
+.pagination {
+    margin-bottom: 0;
+
+    .page-link {
+        font-size: $pagination-font-size;
+    }
+}
+
+
+// Sizing
+
+.pagination-lg .page-link {
+    font-size: $pagination-font-size-lg;
+}
+
+.pagination-sm .page-link {
+    font-size: $pagination-font-size-sm;
+}
+
+
+.pagination-spaced {
+    border-radius: 0;
+
+    .page-link {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: .5rem; 
+        font-weight: 500;
+        border-width: 0;
+        background-color: #fff;
+        border-radius: $pagination-border-radius; 
+        box-shadow: $box-shadow-sm;
+        font-size: $font-size-xs;
+    }
+    &.active .page-link {
+        background-color: $primary;
+        color: #fff;
+    }
+    .page-link:hover {
+        box-shadow: $box-shadow-lg;
+    }
+
+    &.pagination-lg {
+        width: 52px;
+        height: 52px;
+    }
+}

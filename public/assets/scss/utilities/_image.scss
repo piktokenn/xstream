@@ -1,0 +1,27 @@
+.ratio-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+
+.ratio:hover .ratio-btn {
+    display: flex;
+}
+
+
+// Background
+@mixin background-cover($hs-size: cover, $hs-repeat: no-repeat, $hs-positionX: center, $hs-positionY: center) {
+    background-size: $hs-size;
+    background-repeat: $hs-repeat;
+    background-position: $hs-positionX $hs-positionY;
+}
+.bg-img-cover {
+    @include background-cover(contain, no-repeat, center, center);
+}

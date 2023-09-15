@@ -1,0 +1,12 @@
+.breadcrumb {
+
+    .breadcrumb-item+.breadcrumb-item:before {
+        top: 2px;
+        position: relative;
+    }
+
+    .breadcrumb-item,
+    .breadcrumb-item a {
+        color: inherit;
+    }
+}

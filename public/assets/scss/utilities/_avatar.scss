@@ -1,0 +1,125 @@
+.avatar {
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	vertical-align: middle;
+	@include font-size($avatar-font-size);
+	font-weight: $avatar-font-weight;
+	height: $avatar-width;
+	width: $avatar-width;
+	@include border-radius($avatar-border-radius);
+
+	img {
+		width: 100%;
+		@include border-radius(inherit);
+	}
+
+	+ .avatar {
+		margin-left: .25rem;
+	}
+
+	+ .avatar-content {
+		display: inline-block;
+		margin-left: .75rem;
+	}
+}
+
+.avatar-status {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    white-space: nowrap;
+    text-align: center;
+    vertical-align: baseline;
+    border: .2rem solid;
+    border-color: inherit;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1;
+    font-size: .75rem;
+    border-radius: 50%;
+}
+// Sizes
+
+.avatar-2xl {
+	width: $avatar-width-2xl;
+	height: $avatar-width-2xl;
+	@include font-size($avatar-font-size-2xl);
+}
+
+.avatar-xl {
+	width: $avatar-width-xl;
+	height: $avatar-width-xl;
+	@include font-size($avatar-font-size-xl);
+}
+
+.avatar-lg {
+	width: $avatar-width-lg;
+	height: $avatar-width-lg;
+	@include font-size($avatar-font-size-lg);
+}
+
+.avatar-sm {
+	width: $avatar-width-sm;
+	height: $avatar-width-sm;
+	@include font-size($avatar-font-size-sm);
+	@include border-radius($avatar-border-radius-sm);
+}
+
+.avatar-xs {
+	width: $avatar-width-xs;
+	height: $avatar-width-xs;
+	@include font-size($avatar-font-size-xs);
+	@include border-radius($avatar-border-radius-xs);
+}
+
+
+.avatar-group {
+	display: inline-block;
+	line-height: 1;
+
+	.avatar {
+		z-index: 1;
+		@include transition(margin .15s ease-in-out);
+		border: solid 3px;
+		border-color: inherit;
+		&:hover {
+			z-index: 2;
+		}
+
+	}
+
+	.avatar + .avatar {
+		margin-left: -1.25rem;
+	}
+
+	.avatar-sm + .avatar-sm,
+	.avatar-xs + .avatar-xs, {
+		margin-left: -1rem;
+	}
+
+	&:hover {
+		.avatar {
+			@include border-start-radius($avatar-border-radius);
+		}
+
+		.avatar-sm {
+			@include border-start-radius($avatar-border-radius-sm);
+		}
+	}
+}
+
+.avatar-ungroup-hover:hover {
+	.avatar:not(:first-child) {
+		margin-left: 0;
+	}
+}

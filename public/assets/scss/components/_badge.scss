@@ -1,0 +1,26 @@
+// Badge
+.badge-xs {
+    padding: .1rem .5rem;
+    font-size: 60%;
+}
+
+.badge-md {
+    padding: .4rem 1rem;
+}
+
+.badge-lg {
+    padding: .6rem 1rem;
+}
+.notify-badge {
+    position: absolute;
+    right: 5px;
+    bottom: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 100px;
+    background-color: $yellow;
+    border: solid 3px var(--#{$variable-prefix}body-bg);
+}
+.notify-active {
+    color: $dark !important;
+}

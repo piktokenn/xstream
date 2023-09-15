@@ -1,0 +1,131 @@
+.table-theme {
+    border-collapse: separate;
+    border-spacing: 0 5px !important;
+
+    &> :not(:last-child)> :last-child>*,
+    &> :not(caption)>*>* {
+        border: 0;
+    }
+
+    thead {
+        tr {}
+
+        tr th {
+            padding: .5rem 1.5rem;
+            font-weight: normal;
+        }
+    }
+
+    tbody tr:last-child td {
+        border-bottom: 0 !important;
+    }
+
+    tbody td {
+        vertical-align: middle;
+        white-space: nowrap;
+
+        &:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+
+        padding: .565rem 1.5rem;
+    }
+
+    tbody tr {
+        box-shadow: $box-shadow-sm;
+        background-color: #fff;
+    }
+
+    &.table-lg {
+        tbody td {
+            padding: .875rem 1.5rem;
+        }
+
+    }
+}
+
+.table-theme-border {
+    border-collapse: separate;
+    border-spacing: 0 5px !important;
+
+
+    thead {
+        tr {}
+
+        tr th {
+            padding: .5rem 1rem;
+            font-weight: normal;
+            border-bottom: solid 1px $gray-100;
+        }
+    }
+
+    tbody tr:last-child td {
+        border-bottom: 0 !important;
+    }
+
+    tbody td {
+        vertical-align: middle;
+        white-space: nowrap;
+        border-bottom: solid 1px $gray-100;
+
+        padding: .565rem 1rem;
+    }
+
+    tbody tr {
+        background-color: #fff;
+    }
+
+    &.table-lg {
+        tbody td {
+            padding: .875rem 1.5rem;
+        }
+
+    }
+}
+
+.table-themev2 {
+    border-collapse: separate;
+    border-spacing: 0 5px !important;
+
+    &> :not(:last-child)> :last-child>*,
+    &> :not(caption)>*>* {
+        border-color: $gray-100;
+    }
+
+    thead {
+        tr {}
+
+        tr th {
+            padding: .75rem;
+            font-weight: normal;
+        }
+    }
+
+    tbody tr:last-child td {
+        border: 0 !important;
+    }
+
+    tbody td {
+        border-color: $gray-100;
+        vertical-align: middle;
+        white-space: nowrap;
+        padding: .5rem .75rem;
+
+        &:first-child {
+            border-radius: 8px 0 0 8px;
+        }
+
+        &:last-child {
+            border-radius: 0 8px 8px 0;
+        }
+    }
+
+    tbody tr {
+        box-shadow: $box-shadow-sm;
+        background-color: #fff;
+    }
+}
